@@ -19,7 +19,7 @@ export const Form = () => {
       <TextField
         fullWidth
         id="outlined-basic"
-        label="Song name"
+        label=""
         variant="outlined"
         value={firstState}
         onChange={(e) => setFirstState(e.target.value)}
@@ -27,7 +27,7 @@ export const Form = () => {
       <TextField
         fullWidth
         id="outlined-basic"
-        label="Artist name"
+        label=""
         variant="outlined"
         value={secondState}
         onChange={(e) => setSecondState(e.target.value)}
@@ -36,7 +36,7 @@ export const Form = () => {
       <TextField
         fullWidth
         id="outlined-basic"
-        label="Genre"
+        label=""
         variant="outlined"
         value={thirdState}
         onChange={(e) => setThirdState(e.target.value)}

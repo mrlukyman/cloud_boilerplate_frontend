@@ -7,7 +7,7 @@ import { Button, Grid } from '@mui/material';
 export const Dashboard = () => {
   // const { loading, error, data } = useQuery()
   // const [] = useMutation()
-  const [songs, setSongs] = useState([])
+  const [array, setArray] = useState([])
 
   // useEffect(() => {
   //   if (data) {
@@ -15,8 +15,8 @@ export const Dashboard = () => {
   //   }
   // }, [data]);
 
-  const handleRemoveSong = (songId: number) => {
-    setSongs(songs.filter((song: any) => parseInt(song.id) !== songId))
+  const handleRemove = (itemId: number) => {
+    setArray(array.filter((item: any) => parseInt(item.id) !== itemId))
   }
 
   // if (loading) return <p>Loading...</p>;
@@ -26,12 +26,12 @@ export const Dashboard = () => {
     <Container>
       <Grid container>
         <Grid columns={8}>
-          {songs.map((song: any) => (
-            <div key={song.title}>
+          {array.map((item: any) => (
+            <div key={item.title}>
               <p>
-                {song.title}: {song.artist} - {song.genre.name}
+                {item.title}:
               </p>
-              <Button color="error" onClick={() => handleRemoveSong(parseInt(song.id))}>Remove</Button>
+              <Button color="error" onClick={() => handleRemove(parseInt(item.id))}>Remove</Button>
             </div>
           ))}
         </Grid>
